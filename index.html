@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUACK CLUB</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: #ffffff;
+            background-image: url('https://www.animatedimages.org/data/media/710/animated-stars-image-0117.gif');
+            background-size: cover;
+        }
+        header, nav, section, footer {
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            margin: 10px;
+            border-radius: 10px;
+        }
+        nav a {
+            color: #00ffff;
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        h1, h2 {
+            color: #00ff00;
+        }
+        .under-construction {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .form-field {
+            margin-bottom: 10px;
+        }
+        input[type=email] {
+            padding: 8px;
+            border-radius: 5px;
+            border: none;
+        }
+        input[type=submit] {
+            padding: 8px 15px;
+            background-color: #00ffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the QUACK CLUB</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#quackclub">Quack Club</a>
+            <a href="#insideperks">Inside Perks</a>
+            <a href="#games">Games</a>
+            <a href="#cowboy">Cowboy Game Odyssey</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>About Me</h2>
+        <p>
+            I'm Nitro — a programmer of 7 programming languages, YouTuber, and epic pro gamer XD!<br>
+            I go by the name Nitro and my YouTube is <a href="https://www.youtube.com/@TitaniumnNitro" target="_blank">@TitaniumnNitro</a>.<br>
+            I'm also an animator! This site has the QUACK CLUB, DLCs for my games, downloads, and inside perks for videos, games, and animations. Oh yea!
+        </p>
+    </section>
+
+    <section id="quackclub">
+        <h2>Join the Quack Club</h2>
+        <p>Sign up for free to get exclusive access to perks and content!</p>
+        <form action="mailto:brayden291213@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-field">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            <input type="submit" value="Sign Up">
+            <p><i>Note: Email sent will say "A user has signed up for QUACK CLUB with the free membership: their email is __________________"</i></p>
+        </form>
+    </section>
+
+    <section id="insideperks">
+        <h2>Inside Perks</h2>
+        <p>You need to be a Quack Club member to access this section. It's currently under construction — all news and perks are sent through email for now!</p>
+        <div class="under-construction">
+            <img src="https://www.animatedimages.org/data/media/548/animated-under-construction-image-0020.gif" alt="Under Construction">
+            <strong>Hang tight, partner!</strong>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>Games</h2>
+        <ul>
+            <li><a href="https://www.roblox.com/groups/17004912/NitroQuackGames" target="_blank">NitroQuackGames (Roblox Group)</a></li>
+            <li><a href="https://www.roblox.com/users/1726380936/profile" target="_blank">TNitro_YT (Roblox Account)</a></li>
+            <li><a href="https://scratch.mit.edu/users/QuackDev/" target="_blank">QuackDev (Scratch Account)</a></li>
+        </ul>
+    </section>
+
+    <section id="cowboy">
+        <h2>Cowboy Game Odyssey</h2>
+        <p>Yeehaw! This section is all about my wild-west themed game adventure. Stay tuned for more info and upcoming DLCs!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 QUACK CLUB. Created by Nitro.</p>
+    </footer>
+</body>
+</html>
