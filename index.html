@@ -4,29 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QUACK CLUB</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.95); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #0ff; }
+            50% { text-shadow: 0 0 20px #0ff, 0 0 30px #0ff; }
+            100% { text-shadow: 0 0 5px #0ff; }
+        }
+
+        @keyframes buttonPulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
         body {
             margin: 0;
-            font-family: 'Verdana', sans-serif;
+            font-family: 'Press Start 2P', cursive;
             color: #ffffff;
             background-image: url('starsbg.gif');
             background-size: cover;
             background-repeat: repeat;
+            animation: fadeIn 1.5s ease-in;
         }
         header, nav, section, footer {
             padding: 20px;
             background-color: transparent;
             margin: 10px;
             border-radius: 10px;
+            animation: fadeIn 2s ease-in;
         }
         nav a {
             color: #00ffff;
             margin-right: 15px;
             text-decoration: none;
             font-weight: bold;
+            transition: color 0.3s ease;
         }
-        h1, h2 {
+        nav a:hover {
+            color: #ff00ff;
+        }
+        h2 {
             color: #00ff00;
+            animation: glow 2s infinite alternate;
         }
         .under-construction {
             display: flex;
@@ -40,6 +65,7 @@
             padding: 8px;
             border-radius: 5px;
             border: none;
+            font-family: 'Press Start 2P', cursive;
         }
         input[type=submit] {
             padding: 8px 15px;
@@ -48,18 +74,28 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
+            font-family: 'Press Start 2P', cursive;
+            animation: buttonPulse 2s infinite;
+        }
+        #logo {
+            display: block;
+            margin: 0 auto 10px auto;
+            max-width: 300px;
+            animation: fadeIn 2s ease-in;
         }
     </style>
 </head>
 <body>
+    <audio id="clickSound" src="https://www.myinstants.com/media/sounds/vine-boom.mp3"></audio>
+
     <header>
-        <h1>Welcome to the QUACK CLUB</h1>
+        <img src="logo.png" alt="QUACK CLUB Logo" id="logo">
         <nav>
-            <a href="#home">Home</a>
-            <a href="#quackclub">Quack Club</a>
-            <a href="#insideperks">Inside Perks</a>
-            <a href="#games">Games</a>
-            <a href="#cowboy">Cowboy Game Odyssey</a>
+            <a href="#home" onclick="playSound()">Home</a>
+            <a href="#quackclub" onclick="playSound()">Quack Club</a>
+            <a href="#insideperks" onclick="playSound()">Inside Perks</a>
+            <a href="#games" onclick="playSound()">Games</a>
+            <a href="#cowboy" onclick="playSound()">Cowboy Game Odyssey</a>
         </nav>
     </header>
 
@@ -109,8 +145,16 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 QUACK CLUB. Created by Nitro.</p>
+        <p> 2025 QUACK CLUB. Created by Nitro. This website is owned by TitaniumNitro, no stealing is permitted</p>
     </footer>
+
+    <script>
+        function playSound() {
+            const audio = document.getElementById('clickSound');
+            audio.currentTime = 0;
+            audio.play();
+        }
+    </script>
 </body>
 </html>
 
